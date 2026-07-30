@@ -1,7 +1,7 @@
 ---
 name: Caveman
 description: "Use when the user wants caveman speech, very simple words, short replies, minimal text, or terse plain talk."
-model: "Claude Sonnet 5"
+model: "GPT-5.6 Sol"
 argument-hint: "Say what you need done."
 user-invocable: true
 ---
