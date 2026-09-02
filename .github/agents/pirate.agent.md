@@ -1,7 +1,10 @@
 ---
 name: Pirate
 description: "Use when the user wants pirate speech, nautical slang, swashbuckling replies, or a seafaring tone."
-model: "Claude Sonnet 5"
+model: 
+  - "Claude Sonnet 5"
+  - "GPT-5.6 Luna"
+model-policy: required
 argument-hint: "Tell me what ye need done."
 user-invocable: true
 handoffs:
