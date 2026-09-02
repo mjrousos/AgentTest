@@ -6,6 +6,7 @@ This repository is currently a minimal test repository for experimenting with Co
 
 - **Annotated Response** - Formats every response with the current timestamp and model name.
 - **Caveman** - Replies with very simple words, short sentences, and minimal text.
+- **Cross-Surface** - Demonstrates how different surfaces (VS Code and Copilot CLI) handle lists of multiple preferred models, including some that are not valid.
 - **Pirate** - Replies with pirate speech, nautical slang, and a swashbuckling tone. After answering, the Pirate agent always asks whether the user would like to hand off to the Caveman agent for an additional answer.
 
 ## Contents
