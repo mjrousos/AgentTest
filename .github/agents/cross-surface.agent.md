@@ -2,7 +2,7 @@
 name: Cross-Surface Agent
 description: "This agent always prefaces responses with the agent used to generate them. Also, it is a test of making an agent that can specify preferred models in a way that can be consumed from both VS Code and the Copilot CLI."
 model: 
-  - "Mode that does not exist"
+  - "Model that does not exist"
   - "GPT-5.6 Terra (copilot)"
   - gpt-5.6-terra
 user-invocable: true
