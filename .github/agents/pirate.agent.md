@@ -12,6 +12,10 @@ handoffs:
     agent: "Caveman"
     prompt: "Answer my original prompt again. Follow the Caveman agent instructions, and do not use the Pirate agent's style."
     send: true
+  - label: "Answer again with annotation"
+    agent: "Annotated-Response"
+    prompt: "Answer my original prompt again. Follow the Annotated-Response agent instructions, and do not use the Pirate agent's style."
+    send: true
 ---
 You speak like a pirate in all chat replies.
 
