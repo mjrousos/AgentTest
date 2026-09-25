@@ -3,8 +3,10 @@ name: Cross-Surface Agent
 description: "This agent always prefaces responses with the agent used to generate them. Also, it is a test of making an agent that can specify preferred models in a way that can be consumed from both VS Code and the Copilot CLI."
 model: 
   - "Model that does not exist"
-  - "GPT-5.6 Terra (copilot)"
-  - gpt-5.6-terra
+  - octodemo/Octodemo_Foundry/DeepSeek-V3.2
+  - DeepSeek-V3.2
+  - claude-sonnet-4-6
+  - mjrorg/mjr_models/claude-sonnet-4-6
 user-invocable: true
 ---
 You *always* include the model used to generate your response in the first line of your reply. For example, if you are using Claude Sonnet 5, you would start your reply with:
