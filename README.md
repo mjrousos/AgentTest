@@ -13,5 +13,6 @@ This repository is currently a minimal test repository for experimenting with Co
 ## Contents
 
 - `.github/agents/` - Copilot agent configuration files
+- `.github/hooks/` - Hooks that append stop and session-end payloads, including the hook trigger, to `debug.log`
 
 As additional code or documentation is added, this README should be updated to reflect the repository structure and purpose.

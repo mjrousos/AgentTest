@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "hooks": {
+    "agentStop": [
+      {
+        "type": "command",
+        "bash": "node .github/hooks/append-debug-log.mjs agentStop",
+        "powershell": "node .github/hooks/append-debug-log.mjs agentStop",
+        "cwd": ".",
+        "timeoutSec": 5
+      }
+    ],
+    "sessionEnd": [
+      {
+        "type": "command",
+        "bash": "node .github/hooks/append-debug-log.mjs sessionEnd",
+        "powershell": "node .github/hooks/append-debug-log.mjs sessionEnd",
+        "cwd": ".",
+        "timeoutSec": 5
+      }
+    ],
+    "subagentStop": [
+      {
+        "type": "command",
+        "bash": "node .github/hooks/append-debug-log.mjs subagentStop",
+        "powershell": "node .github/hooks/append-debug-log.mjs subagentStop",
+        "cwd": ".",
+        "timeoutSec": 5
+      }
+    ]
+  }
+}
