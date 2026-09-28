@@ -6,6 +6,9 @@ const CAVEMAN_PROMPT =
     "before asking whether Caveman should answer it too. Answer that same prompt afresh as Caveman. " +
     "Do not answer the user's 'yes' or copy Pirate's wording. Do not repeat side effects of Pirate's work.";
 
+// Define a workflow that has two phases: 
+// - First, activate the pirate agent and pause
+// - Second, Switch to caveman agent and continue the conversation
 const workflow = defineWorkflow({
     meta: {
         name: WORKFLOW_NAME,
@@ -32,6 +35,7 @@ const session = await joinSession({
     workflows: [workflow],
     commands: [
         {
+            // The pirate-caveman command starts the workflow (after checking that no other handoff is in progress)
             name: "pirate-caveman",
             description: "Start an interactive Pirate conversation with an optional Caveman handoff",
             handler: async () => {
@@ -63,6 +67,7 @@ const session = await joinSession({
     ],
     tools: [
         {
+            // This tool is used by Copilot to resume the workflow and move on to the caveman phase
             name: "pirate_caveman_handoff",
             description: "After the user accepts Pirate's Caveman offer, schedule the active workflow handoff. Call only for an explicit yes.",
             parameters: { type: "object", properties: {} },
@@ -92,10 +97,13 @@ const session = await joinSession({
                     }
                     void (async () => {
                         try {
+                            // Resume the session
                             const resumed = await session.workflow.resume(runId, { logPhaseNames: true });
                             if (resumed.status !== "completed") {
                                 throw new Error(`Handoff did not complete: ${resumed.error ?? resumed.status}`);
                             }
+
+                            // Send the prompt for caveman to continue the conversation
                             await session.send({ source: "system", prompt: CAVEMAN_PROMPT });
                         } catch (error) {
                             await session.log(`Caveman handoff failed: ${error.message}`, { level: "error" });
