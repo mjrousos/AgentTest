@@ -12,7 +12,7 @@ This repository is currently a minimal test repository for experimenting with Co
 
 ## Interactive workflow experiment
 
-Run `/pirate-caveman` in the Copilot CLI. The Dynamic Workflow selects Pirate and asks how it can help. Chat with Pirate normally; after answering, Pirate offers a Caveman answer. Reply **yes** to let the extension resume the paused workflow, select Caveman, and ask Caveman to answer the same prompt from the conversation history. Outside this experiment, Pirate's existing handoff control and manual instructions still apply. Starting `/pirate-caveman` again cancels any earlier paused run of this experiment.
+Run `/pirate-caveman` in the Copilot CLI. The Dynamic Workflow selects Pirate and asks how it can help. The workflow explicitly requests normal chat for the greeting, conversation, and Caveman offer, without `ask_user`, elicitation, or forms. Chat with Pirate normally; after answering, Pirate offers a Caveman answer. Reply **yes** to let the extension resume the paused workflow, select Caveman, and ask Caveman to answer the same prompt from the conversation history. Outside this experiment, Pirate's existing handoff control and manual instructions still apply. Starting `/pirate-caveman` again cancels any earlier paused run of this experiment.
 
 ## Contents
 

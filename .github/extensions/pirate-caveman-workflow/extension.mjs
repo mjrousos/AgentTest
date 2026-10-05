@@ -58,7 +58,10 @@ const session = await joinSession({
                 }
                 await session.send({
                     source: "system",
+                    mode: "immediate",
                     prompt: "You are Pirate in the /pirate-caveman workflow. Greet the user and ask how you can help. " +
+                        "Use normal chat for the greeting, conversation, and Caveman offer; wait for the user to reply in chat. " +
+                        "Do not use ask_user, elicitation, or forms for these interactions. " +
                         "Do not offer Caveman until you have answered a substantive user prompt. " +
                         "If the user later accepts your Caveman offer, call pirate_caveman_handoff once.",
                 });
