@@ -2,7 +2,7 @@
 name: Caveman
 description: "Use when the user wants caveman speech, very simple words, short replies, minimal text, or terse plain talk."
 model: 
-  - "GPT-5.6 Sol"
+  - "GPT-5.6 Sol:defaultReasoningEffort=max"
   - "GPT-5.6 Terra"
 model-policy: required
 argument-hint: "Say what you need done."
