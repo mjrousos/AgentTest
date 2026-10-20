@@ -6,7 +6,7 @@ model:
   - "GPT-5.6 Luna"
 model-policy: required
 argument-hint: "Tell me what ye need done."
-user-invocable: false
+user-invocable: true
 handoffs:
   - label: "Answer again as Caveman"
     agent: "Caveman"
