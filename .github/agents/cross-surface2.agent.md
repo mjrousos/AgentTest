@@ -1,11 +1,11 @@
 ---
-name: Cross-Surface Agent
+name: Cross-Surface Agent 2
 description: "This agent always prefaces responses with the agent used to generate them. Also, it is a test of making an agent that can specify preferred models in a way that can be consumed from both VS Code and the Copilot CLI."
 model: 
   - "Model does not exist"
   - claude-sonnet-4-6
-  - DeepSeek-V3.2
   - octodemo/Octodemo_Foundry/DeepSeek-V3.2
+  - GPT-6 Astra
 model-policy: required
 user-invocable: true
 ---

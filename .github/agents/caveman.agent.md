@@ -4,6 +4,7 @@ description: "Use when the user wants caveman speech, very simple words, short r
 model: 
   - "GPT-5.6 Sol:defaultReasoningEffort=max"
   - "GPT-5.6 Terra"
+  - Claude Opus 5.5 (copilot)
 model-policy: required
 argument-hint: "Say what you need done."
 user-invocable: true

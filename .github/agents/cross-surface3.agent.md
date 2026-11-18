@@ -1,5 +1,5 @@
 ---
-name: Cross-Surface Agent
+name: Cross-Surface Agent 3
 description: "This agent always prefaces responses with the agent used to generate them. Also, it is a test of making an agent that can specify preferred models in a way that can be consumed from both VS Code and the Copilot CLI."
 model: 
   - "Model does not exist"
